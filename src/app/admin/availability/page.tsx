@@ -113,8 +113,7 @@ export default function NftMarketplace() {
                   Avatar1,
                   Avatar1,
                 ]}
-                image={Nft1}
-                currentbid=""
+              
                 download="#"
               />
               <NFT
@@ -130,7 +129,7 @@ export default function NftMarketplace() {
                   Avatar1,
                   Avatar1,
                 ]}
-                image={Nft2}
+              
                 download="#"
               />
               <NFT
@@ -146,8 +145,6 @@ export default function NftMarketplace() {
                   Avatar1,
                   Avatar1,
                 ]}
-                image={Nft3}
-                currentbid="0.91 ETH"
                 download="#"
               />
             </SimpleGrid>
