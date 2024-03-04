@@ -41,7 +41,7 @@ export default function ComplexTable(props: { tableData: any }) {
 					align='center'
 					fontSize={{ sm: '10px', lg: '12px' }}
 					color='gray.400'>
-					NAME
+					Reg No.
 				</Text>
 			),
 			cell: (info: any) => (
@@ -72,7 +72,7 @@ export default function ComplexTable(props: { tableData: any }) {
 					color={
 						info.getValue() === 'Approved' ? (
 							'green.500'
-						) : info.getValue() === 'Disable' ? (
+						) : info.getValue() === 'Denied' ? (
 							'red.500'
 						) : info.getValue() === 'Error' ? (
 							'orange.500'
@@ -81,7 +81,7 @@ export default function ComplexTable(props: { tableData: any }) {
 					as={
 						info.getValue() === 'Approved' ? (
 							MdCheckCircle
-						) : info.getValue() === 'Disable' ? (
+						) : info.getValue() === 'Denied' ? (
 							MdCancel
 						) : info.getValue() === 'Error' ? (
 							MdOutlineError
