@@ -1,4 +1,4 @@
-// Chakra imports
+	// Chakra imports
 import { Flex, useColorModeValue } from '@chakra-ui/react';
 import Image from 'next/image';
 import Avatar4 from 'img/avatars/avatar4.png';

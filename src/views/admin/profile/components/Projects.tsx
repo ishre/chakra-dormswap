@@ -26,11 +26,11 @@ export default function Projects (props: { [x: string]: any }) {
         mt='10px'
         mb='4px'
       >
-        All projects
+        Greveiances
       </Text>
       <Text color={textColorSecondary} fontSize='md' me='26px' mb='40px'>
-        Here you can find more details about your projects. Keep you user
-        engaged by providing meaningful information.
+
+      All the issues raised will be adressed here itself
       </Text>
       <Project
         boxShadow={cardShadow}
@@ -38,7 +38,7 @@ export default function Projects (props: { [x: string]: any }) {
         image={Project1}
         ranking='1'
         link='#'
-        title='Technology behind the Blockchain'
+        title='21BCG10248 Raised an issue request'
       />
       <Project
         boxShadow={cardShadow}
@@ -46,14 +46,14 @@ export default function Projects (props: { [x: string]: any }) {
         image={Project2}
         ranking='2'
         link='#'
-        title='Greatest way to a good Economy'
+        title='21BCY10224 raised an issue request'
       />
       <Project
         boxShadow={cardShadow}
         image={Project3}
         ranking='3'
         link='#'
-        title='Most essential tips for Burnout'
+        title='21BCE10235 raised an issue request'
       />
     </Card>
   )

@@ -1,149 +1,162 @@
 'use client';
 
+
+import React from 'react';
+
+// Chakra imports
 import {
   Box,
+  Button,
   Flex,
-  FormLabel,
-  Image,
-  Icon,
-  Select,
-  SimpleGrid,
+  Grid,
+  Text,
   useColorModeValue,
+  SimpleGrid,
+  Link,
 } from '@chakra-ui/react';
+
 // Custom components
-// import MiniCalendar from 'components/calendar/MiniCalendar';
-import MiniStatistics from 'components/card/MiniStatistics';
-import IconBox from 'components/icons/IconBox';
-import {
-  MdAddTask,
-  MdAttachMoney,
-  MdBarChart,
-  MdFileCopy,
-} from 'react-icons/md';
-import CheckTable from 'views/admin/default/components/CheckTable';
-import ComplexTable from 'views/admin/default/components/ComplexTable';
-import DailyTraffic from 'views/admin/default/components/DailyTraffic';
-import PieCard from 'views/admin/default/components/PieCard';
-import Tasks from 'views/admin/default/components/Tasks';
-import TotalSpent from 'views/admin/default/components/TotalSpent';
-import WeeklyRevenue from 'views/admin/default/components/WeeklyRevenue';
-import tableDataCheck from 'views/admin/default/variables/tableDataCheck';
-import tableDataComplex from 'views/admin/default/variables/tableDataComplex';
+import TableTopCreators from 'views/admin/marketplace/components/TableTopCreators';
+import HistoryItem from 'views/admin/marketplace/components/HistoryItem';
+import NFT from 'components/card/NFT';
+import Card from 'components/card/Card';
+import tableDataTopCreators from 'views/admin/marketplace/variables/tableDataTopCreators';
+
 // Assets
-import Usa from 'img/dashboards/usa.png';
+import Nft1 from 'img/nfts/Nft1.png';
+import Nft2 from 'img/nfts/Nft2.png';
+import Nft3 from 'img/nfts/Nft3.png';
+import Nft4 from 'img/nfts/Nft4.png';
+import Nft5 from 'img/nfts/Nft5.png';
+import Nft6 from 'img/nfts/Nft6.png';
+import Avatar1 from 'img/avatars/avatar1.png';
+import Avatar2 from 'img/avatars/avatar2.png';
+import Avatar3 from 'img/avatars/avatar3.png';
+import Avatar4 from 'img/avatars/avatar4.png';
+import AdminLayout from 'layouts/admin';
 
-export default function Default() {
+export default function NftMarketplace() {
   // Chakra Color Mode
-
-  const brandColor = useColorModeValue('brand.500', 'white');
-  const boxBg = useColorModeValue('secondaryGray.300', 'whiteAlpha.100');
-
+  const textColor = useColorModeValue('secondaryGray.900', 'white');
+  const textColorBrand = useColorModeValue('brand.500', 'white');
   return (
-    <Box pt={{ base: '130px', md: '80px', xl: '80px' }}>
-      <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3, '2xl': 6 }}
-        gap="20px"
+    <Box w="100%" pt={{ base: '180px', md: '80px', xl: '100px' }}>
+      {/* Main Fields */}
+      <Grid
         mb="20px"
+        gridTemplateColumns={{ xl: 'repeat(3, 1fr)', '2xl': '1fr 0.46fr' }}
+        gap={{ base: '20px', xl: '20px' }}
+        display={{ base: 'block', xl: 'grid' }}
       >
-        <MiniStatistics
-          startContent={
-            <IconBox
-              w="56px"
-              h="56px"
-              bg={boxBg}
-              icon={
-                <Icon w="32px" h="32px" as={MdBarChart} color={brandColor} />
-              }
-            />
-          }
-          name="Earnings"
-          value="$350.4"
-        />
-        <MiniStatistics
-          startContent={
-            <IconBox
-              w="56px"
-              h="56px"
-              bg={boxBg}
-              icon={
-                <Icon w="32px" h="32px" as={MdAttachMoney} color={brandColor} />
-              }
-            />
-          }
-          name="Spend this month"
-          value="$642.39"
-        />
-        <MiniStatistics growth="+23%" name="Sales" value="$574.34" />
-        <MiniStatistics
-          endContent={
-            <Flex me="-16px" mt="10px">
-              <FormLabel htmlFor="balance">
-                <Box boxSize={'12'}>
-                  <Image alt="" src={Usa.src} w={'100%'} h={'100%'} />
-                </Box>
-              </FormLabel>
-              <Select
-                id="balance"
-                variant="mini"
-                mt="5px"
-                me="0px"
-                defaultValue="usd"
+        <Flex
+          flexDirection="column"
+          gridArea={{ xl: '1 / 1 / 2 / 3', '2xl': '1 / 1 / 2 / 2' }}
+        >
+          {/* <Banner /> */}
+          <Flex direction="column">
+            <Flex
+              mt="45px"
+              mb="20px"
+              justifyContent="space-between"
+              direction={{ base: 'column', md: 'row' }}
+              align={{ base: 'start', md: 'center' }}
+            >
+              <Text color={textColor} fontSize="2xl" ms="24px" fontWeight="700">
+                Available beds
+              </Text>
+              <Flex
+                align="center"
+                me="20px"
+                ms={{ base: '24px', md: '0px' }}
+                mt={{ base: '20px', md: '0px' }}
               >
-                <option value="usd">USD</option>
-                <option value="eur">EUR</option>
-                <option value="gba">GBA</option>
-              </Select>
+                <Link
+                  href="#art"
+                  color={textColorBrand}
+                  fontWeight="500"
+                  me={{ base: '34px', md: '44px' }}
+                >
+                  Block1
+                </Link>
+                <Link
+                  href="#music"
+                  color={textColorBrand}
+                  fontWeight="500"
+                  me={{ base: '34px', md: '44px' }}
+                >
+                  Block2
+                </Link>
+                <Link
+                  href="#collectibles"
+                  color={textColorBrand}
+                  fontWeight="500"
+                  me={{ base: '34px', md: '44px' }}
+                >
+                  Block3
+                </Link>
+                <Link href="#sports" color={textColorBrand} fontWeight="500">
+                  Block4
+                </Link>
+              </Flex>
             </Flex>
-          }
-          name="Your balance"
-          value="$1,000"
-        />
-        <MiniStatistics
-          startContent={
-            <IconBox
-              w="56px"
-              h="56px"
-              bg="linear-gradient(90deg, #4481EB 0%, #04BEFE 100%)"
-              icon={<Icon w="28px" h="28px" as={MdAddTask} color="white" />}
-            />
-          }
-          name="New Tasks"
-          value="154"
-        />
-        <MiniStatistics
-          startContent={
-            <IconBox
-              w="56px"
-              h="56px"
-              bg={boxBg}
-              icon={
-                <Icon w="32px" h="32px" as={MdFileCopy} color={brandColor} />
-              }
-            />
-          }
-          name="Total Projects"
-          value="2935"
-        />
-      </SimpleGrid>
-
-      <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px" mb="20px">
-        <TotalSpent />
-        <WeeklyRevenue />
-      </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap="20px" mb="20px">
-        <CheckTable tableData={tableDataCheck} />
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
-          <DailyTraffic />
-          <PieCard />
-        </SimpleGrid>
-      </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap="20px" mb="20px">
-        <ComplexTable tableData={tableDataComplex} />
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
-          <Tasks />
-          {/* <MiniCalendar h="100%" minW="100%" selectRange={false} /> */}
-        </SimpleGrid>
-      </SimpleGrid>
+            <SimpleGrid columns={{ base: 1, md: 3 }} gap="20px">
+              <NFT
+                name="3-bedded non-ac"
+                author="By 21BCY10248"
+                bidders={[
+                  Avatar1,
+                  Avatar2,
+                  Avatar3,
+                  Avatar4,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                ]}
+                image={Nft1}
+                currentbid=""
+                download="#"
+              />
+              <NFT
+                name="4-bedded ac"
+                author="By 21BCE10119"
+                bidders={[
+                  Avatar1,
+                  Avatar2,
+                  Avatar3,
+                  Avatar4,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                ]}
+                image={Nft2}
+                download="#"
+              />
+              <NFT
+                name="4-bedded non ac "
+                author="By 21BMI10118"
+                bidders={[
+                  Avatar1,
+                  Avatar2,
+                  Avatar3,
+                  Avatar4,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                ]}
+                image={Nft3}
+                currentbid="0.91 ETH"
+                download="#"
+              />
+            </SimpleGrid>
+            
+          </Flex>
+        </Flex>
+        
+      </Grid>
+      {/* Delete Product */}
     </Box>
   );
 }

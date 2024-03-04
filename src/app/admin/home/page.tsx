@@ -10,6 +10,11 @@ import tableDataColumns from 'views/admin/dataTables/variables/tableDataColumns'
 import tableDataComplex from 'views/admin/dataTables/variables/tableDataComplex';
 import React from 'react';
 import AdminLayout from 'layouts/admin';
+import Projects from 'views/admin/profile/components/Projects';
+
+import banner from 'img/auth/banner.png';
+import avatar from 'img/avatars/avatar4.png';
+
 
 export default function home() {
   return (
@@ -21,6 +26,15 @@ export default function home() {
       >
         
         <ComplexTable tableData={tableDataComplex} />
+        <Projects
+          banner={banner}
+          avatar={avatar}
+          name="Adela Parkson"
+          job="Product Designer" 
+          posts="17"
+          followers="9.7k"
+          following="274"
+        />
       </SimpleGrid>
     </Box>
   );
