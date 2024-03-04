@@ -164,6 +164,7 @@ export default function HeaderLinks(props: {
         </MenuList>
       </Menu>
 
+<<<<<<< HEAD
       <Menu>
         <MenuButton p="0px">
           <Icon
@@ -174,7 +175,7 @@ export default function HeaderLinks(props: {
             h="18px"
             me="10px"
           />
-        </MenuButton>
+        {/* </MenuButton> */}
         <MenuList
           boxShadow={shadow}
           p="20px"
@@ -226,6 +227,8 @@ export default function HeaderLinks(props: {
         </MenuList>
       </Menu>
 
+=======
+>>>>>>> 2a49cb2aab2efc3256d44f667da1d0eb8e0772fb
       <Button
         variant="no-hover"
         bg="transparent"

@@ -14,7 +14,11 @@ export function SidebarBrand() {
 
 	return (
 		<Flex alignItems='center' flexDirection='column'>
-			<div className=' text-200px'>DormSwap</div>
+<<<<<<< HEAD
+			<div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'gray' }}>DormSwap</div>
+=======
+			<div className= 'text-xl'>DormSwap</div>
+>>>>>>> cd50e6bfe4d66455379272deca09192ba7049d7b
 			<HSeparator mb='20px' />
 		</Flex>
 	);
